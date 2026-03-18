@@ -14,6 +14,7 @@ import { SPACING, FONT_SIZES, PAYMENT_METHODS } from '../../utils/constants';
 import { formatPrice } from '../../utils/formatters';
 import * as paymentService from '../../services/paymentService';
 import * as bookingService from '../../services/bookingService';
+import { useTranslation } from 'react-i18next';
 
 const PaymentScreen = ({ navigation }) => {
   const { colors } = useTheme();
@@ -23,6 +24,7 @@ const PaymentScreen = ({ navigation }) => {
   const [selectedMethod, setSelectedMethod] = useState(null);
   const [cardDetails, setCardDetails] = useState({});
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const total = calculateTotal();
 
@@ -77,12 +79,12 @@ const PaymentScreen = ({ navigation }) => {
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
-        <ProgressSteps currentStep={2} />
+        <ProgressSteps currentStep={2} steps={[t('booking.review'), t('booking.payment'), t('booking.confirmed')]} />
 
-        <Text style={[styles.amountLabel, { color: colors.textSecondary }]}>Amount Due</Text>
+        <Text style={[styles.amountLabel, { color: colors.textSecondary }]}>{t('booking.amountDue')}</Text>
         <Text style={[styles.amount, { color: colors.text }]}>{formatPrice(total)}</Text>
 
-        <Text style={[styles.sectionTitle, { color: colors.text }]}>Payment Method</Text>
+        <Text style={[styles.sectionTitle, { color: colors.text }]}>{t('booking.paymentMethod')}</Text>
         {PAYMENT_METHODS.map((method) => (
           <PaymentMethodCard
             key={method.id}
@@ -118,12 +120,12 @@ const PaymentScreen = ({ navigation }) => {
         <View style={styles.securityNote}>
           <Ionicons name="lock-closed" size={16} color={colors.success} />
           <Text style={[styles.securityText, { color: colors.textTertiary }]}>
-            256-bit SSL encrypted · PCI DSS compliant
+            {t('booking.security')}
           </Text>
         </View>
 
         <Button
-          title={`Pay ${formatPrice(total)}`}
+          title={`${t('booking.payButton')} ${formatPrice(total)}`}
           onPress={handlePayment}
           loading={loading}
           disabled={!selectedMethod}
@@ -141,8 +143,8 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   content: { padding: SPACING.lg },
   amountLabel: { textAlign: 'center', fontSize: FONT_SIZES.sm, marginTop: SPACING.sm },
-  amount: { textAlign: 'center', fontSize: 36, fontWeight: '800', marginBottom: SPACING.xl },
-  sectionTitle: { fontSize: FONT_SIZES.xl, fontWeight: '700', marginBottom: SPACING.md },
+  amount: { textAlign: 'center', fontSize: 36, fontFamily: 'Inter_800ExtraBold', marginBottom: SPACING.xl },
+  sectionTitle: { fontSize: FONT_SIZES.xl, fontFamily: 'Inter_700Bold', marginBottom: SPACING.md },
   cardForm: { marginTop: SPACING.md, marginBottom: SPACING.lg },
   securityNote: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginVertical: SPACING.lg },
   securityText: { fontSize: FONT_SIZES.xs, marginLeft: 6 },

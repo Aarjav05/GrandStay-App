@@ -39,12 +39,12 @@ const PriceBreakdown = ({ breakdown, style }) => {
 
 const styles = StyleSheet.create({
   container: { borderRadius: BORDER_RADIUS.lg, padding: SPACING.lg, borderWidth: 1 },
-  title: { fontSize: FONT_SIZES.lg, fontWeight: '700', marginBottom: SPACING.md },
+  title: { fontSize: FONT_SIZES.lg, fontFamily: 'Inter_700Bold', marginBottom: SPACING.md },
   row: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: SPACING.sm },
   label: { fontSize: FONT_SIZES.md },
-  value: { fontSize: FONT_SIZES.md, fontWeight: '500' },
-  totalLabel: { fontSize: FONT_SIZES.lg, fontWeight: '700' },
-  totalValue: { fontSize: FONT_SIZES.xl, fontWeight: '800' },
+  value: { fontSize: FONT_SIZES.md, fontFamily: 'Inter_500Medium' },
+  totalLabel: { fontSize: FONT_SIZES.lg, fontFamily: 'Inter_700Bold' },
+  totalValue: { fontSize: FONT_SIZES.xl, fontFamily: 'Inter_800ExtraBold' },
 });
 
 export default PriceBreakdown;

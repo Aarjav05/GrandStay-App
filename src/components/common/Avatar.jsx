@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   initials: {
-    fontWeight: '700',
+    fontFamily: 'Inter_700Bold',
   },
 });
 

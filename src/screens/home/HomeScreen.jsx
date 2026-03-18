@@ -14,6 +14,7 @@ import SkeletonCard from '../../components/common/SkeletonCard';
 import { SPACING, FONT_SIZES } from '../../utils/constants';
 import { getGreeting } from '../../utils/formatters';
 import { searchHotels } from '../../services/searchService';
+import { useTranslation } from 'react-i18next';
 
 const HomeScreen = ({ navigation }) => {
   const { colors } = useTheme();
@@ -21,6 +22,7 @@ const HomeScreen = ({ navigation }) => {
   const { hotels, featuredHotels, loadHotels, loadFeatured, loading } = useHotels();
   const { location } = useLocation();
   const { isInWishlist, toggleWishlist } = useWishlist();
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredHotels, setFilteredHotels] = useState([]);
   const [refreshing, setRefreshing] = useState(false);
@@ -62,7 +64,7 @@ const HomeScreen = ({ navigation }) => {
             {getGreeting()},
           </Text>
           <Text style={[styles.name, { color: colors.text }]}>
-            {user?.name || 'Traveler'} 👋
+            {user?.name || t('common.traveler')} 👋
           </Text>
         </View>
       </View>
@@ -81,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
 
       {featuredHotels.length > 0 && (
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Featured Hotels</Text>
+          <Text style={[styles.sectionTitle, { color: colors.text }]}>{t('home.featured')}</Text>
           <FlatList
             data={featuredHotels}
             horizontal
@@ -143,10 +145,10 @@ const styles = StyleSheet.create({
   container: { flex: 1, paddingTop: 50 },
   headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: SPACING.lg, marginBottom: SPACING.md },
   greeting: { fontSize: FONT_SIZES.md },
-  name: { fontSize: FONT_SIZES.xxl, fontWeight: '800' },
+  name: { fontSize: FONT_SIZES.xxl, fontFamily: 'Inter_800ExtraBold' },
   searchBar: { marginHorizontal: SPACING.lg },
   section: { marginBottom: SPACING.sm },
-  sectionTitle: { fontSize: FONT_SIZES.xl, fontWeight: '700', paddingHorizontal: SPACING.lg, marginBottom: SPACING.sm },
+  sectionTitle: { fontSize: FONT_SIZES.xl, fontFamily: 'Inter_700Bold', paddingHorizontal: SPACING.lg, marginBottom: SPACING.sm },
   featuredList: { paddingHorizontal: SPACING.lg },
   listContent: { paddingBottom: 100 },
   cardWrapper: { paddingHorizontal: SPACING.lg },

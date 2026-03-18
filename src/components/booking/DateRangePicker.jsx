@@ -82,7 +82,7 @@ const DateRangePicker = ({ visible, onClose, checkIn, checkOut, onSelect }) => {
                   style={[
                     styles.dayText,
                     { color: isPast ? colors.textTertiary : colors.text },
-                    (isStart || isEnd) && { color: '#fff', fontWeight: '700' },
+                    (isStart || isEnd) && { color: '#fff', fontFamily: 'Inter_700Bold' },
                   ]}
                 >
                   {format(day, 'd')}
@@ -131,19 +131,19 @@ const DateRangePicker = ({ visible, onClose, checkIn, checkOut, onSelect }) => {
 };
 
 const styles = StyleSheet.create({
-  title: { fontSize: FONT_SIZES.xl, fontWeight: '700', textAlign: 'center', marginBottom: SPACING.sm },
+  title: { fontSize: FONT_SIZES.xl, fontFamily: 'Inter_700Bold', textAlign: 'center', marginBottom: SPACING.sm },
   navRow: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: SPACING.sm, paddingHorizontal: 8 },
   monthContainer: { marginBottom: SPACING.xl },
-  monthTitle: { fontSize: FONT_SIZES.lg, fontWeight: '600', textAlign: 'center', marginBottom: SPACING.sm },
+  monthTitle: { fontSize: FONT_SIZES.lg, fontFamily: 'Inter_600SemiBold', textAlign: 'center', marginBottom: SPACING.sm },
   weekHeader: { flexDirection: 'row', marginBottom: 8 },
-  weekDay: { flex: 1, textAlign: 'center', fontSize: FONT_SIZES.xs, fontWeight: '600' },
+  weekDay: { flex: 1, textAlign: 'center', fontSize: FONT_SIZES.xs, fontFamily: 'Inter_600SemiBold' },
   daysGrid: { flexDirection: 'row', flexWrap: 'wrap' },
   dayCell: { width: '14.28%', aspectRatio: 1, alignItems: 'center', justifyContent: 'center' },
   dayText: { fontSize: FONT_SIZES.md },
   footer: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: SPACING.md },
-  dateLabel: { fontSize: FONT_SIZES.md, fontWeight: '500' },
+  dateLabel: { fontSize: FONT_SIZES.md, fontFamily: 'Inter_500Medium' },
   confirmBtn: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: BORDER_RADIUS.md },
-  confirmText: { color: '#fff', fontWeight: '600', fontSize: FONT_SIZES.md },
+  confirmText: { color: '#fff', fontFamily: 'Inter_600SemiBold', fontSize: FONT_SIZES.md },
 });
 
 export default DateRangePicker;

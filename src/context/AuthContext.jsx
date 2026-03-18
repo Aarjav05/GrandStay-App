@@ -47,14 +47,16 @@ export const AuthProvider = ({ children }) => {
       const profile = await authService.getUserProfile(supabaseUser.id);
       setUser(profile || {
         uid: supabaseUser.id,
-        name: supabaseUser.user_metadata?.name || '',
+        name: supabaseUser.user_metadata?.name || supabaseUser.email?.split('@')[0] || '',
         email: supabaseUser.email || '',
+        walletBalance: 0,
       });
     } catch {
       setUser({
         uid: supabaseUser.id,
-        name: supabaseUser.user_metadata?.name || '',
+        name: supabaseUser.user_metadata?.name || supabaseUser.email?.split('@')[0] || '',
         email: supabaseUser.email || '',
+        walletBalance: 0,
       });
     } finally {
       setLoading(false);

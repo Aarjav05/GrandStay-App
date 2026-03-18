@@ -55,11 +55,11 @@ const GuestPicker = ({ guests, onUpdate, style }) => {
 const styles = StyleSheet.create({
   container: {},
   row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: SPACING.md, borderBottomWidth: 1 },
-  label: { fontSize: FONT_SIZES.md, fontWeight: '600' },
+  label: { fontSize: FONT_SIZES.md, fontFamily: 'Inter_600SemiBold' },
   subtitle: { fontSize: FONT_SIZES.xs, marginTop: 2 },
   controls: { flexDirection: 'row', alignItems: 'center' },
   btn: { width: 32, height: 32, borderRadius: 16, borderWidth: 1.5, alignItems: 'center', justifyContent: 'center' },
-  count: { fontSize: FONT_SIZES.lg, fontWeight: '600', marginHorizontal: SPACING.lg, minWidth: 24, textAlign: 'center' },
+  count: { fontSize: FONT_SIZES.lg, fontFamily: 'Inter_600SemiBold', marginHorizontal: SPACING.lg, minWidth: 24, textAlign: 'center' },
 });
 
 export default GuestPicker;

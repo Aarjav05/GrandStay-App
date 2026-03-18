@@ -50,14 +50,19 @@ export const getUserProfile = async (uid) => {
   
   if (error && error.code !== 'PGRST116') throw error; // ignore no rows
   
-  if (!data) return null;
+  const authUser = (await supabase.auth.getUser()).data.user;
+  const profileName = data?.name;
+  const metaName = authUser?.user_metadata?.name;
+  const emailName = authUser?.email?.split('@')[0];
+  const displayName = profileName || metaName || emailName || '';
   
   return {
-    uid: data.id,
-    name: data.name,
-    email: (await supabase.auth.getUser()).data.user?.email, // Keep email in sync if needed, or omit
-    avatar: data.avatar,
-    phone: data.phone,
+    uid: data?.id || uid,
+    name: displayName,
+    email: authUser?.email || '',
+    avatar: data?.avatar,
+    phone: data?.phone,
+    walletBalance: data?.wallet_balance || 0,
   };
 };
 

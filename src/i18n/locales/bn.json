@@ -1,0 +1,86 @@
+{
+  "home": {
+    "greeting": "নমস্কার",
+    "featured": "বিশেষ হোটেল",
+    "popular": "জনপ্রিয় হোটেল",
+    "searchPlaceholder": "হোটেল, শহর খুঁজুন..."
+  },
+  "auth": {
+    "login": "লগইন",
+    "signup": "সাইন আপ",
+    "createAccount": "অ্যাকাউন্ট তৈরি করুন",
+    "welcomeBack": "পুনরায় স্বাগতম",
+    "joinSubtitle": "আপনার সেরা থাকার জায়গা খুঁজুন",
+    "signInSubtitle": "আপনার যাত্রা চালিয়ে যেতে লগইন করুন",
+    "fullName": "পুরো নাম",
+    "email": "ইমেইল",
+    "password": "পাসওয়ার্ড",
+    "confirmPassword": "পাসওয়ার্ড নিশ্চিত করুন",
+    "forgotPassword": "পাসওয়ার্ড ভুলে গেছেন?",
+    "noAccount": "অ্যাকাউন্ট নেই?",
+    "haveAccount": "ইতিমধ্যে অ্যাকাউন্ট আছে?"
+  },
+  "booking": {
+    "review": "পর্যালোচনা",
+    "payment": "পেমেন্ট",
+    "confirmed": "নিশ্চিত",
+    "guestName": "অতিথির নাম",
+    "phone": "ফোন নম্বর",
+    "specialRequests": "বিশেষ অনুরোধ (ঐচ্ছিক)",
+    "proceedPayment": "পেমেন্ট করুন",
+    "amountDue": "প্রদেয় পরিমাণ",
+    "paymentMethod": "পেমেন্ট পদ্ধতি",
+    "payButton": "পেমেন্ট",
+    "bookingConfirmed": "বুকিং নিশ্চিত! 🎉",
+    "bookingId": "বুকিং আইডি",
+    "hotel": "হোটেল",
+    "room": "কক্ষ",
+    "checkIn": "চেক-ইন",
+    "checkOut": "চেক-আউট",
+    "totalPaid": "মোট প্রদান",
+    "viewBookings": "আমার বুকিং দেখুন",
+    "backHome": "হোমে ফিরুন",
+    "security": "256-বিট SSL এনক্রিপ্টেড · PCI DSS"
+  },
+  "profile": {
+    "wishlist": "ইচ্ছা তালিকা",
+    "settings": "সেটিংস",
+    "help": "সাহায্য",
+    "about": "অতিথি সম্পর্কে",
+    "logout": "লগ আউট",
+    "bookings": "বুকিং",
+    "completed": "সম্পন্ন",
+    "spent": "ব্যয়"
+  },
+  "settings": {
+    "title": "সেটিংস",
+    "theme": "ডার্ক মোড",
+    "language": "ভাষা",
+    "notifications": "বিজ্ঞপ্তি",
+    "currency": "মুদ্রা"
+  },
+  "common": {
+    "traveler": "ভ্রমণকারী",
+    "perNight": "/রাত",
+    "filters": "ফিল্টার",
+    "sortBy": "সাজান",
+    "starRating": "স্টার রেটিং",
+    "amenities": "সুবিধাসমূহ",
+    "apply": "প্রয়োগ করুন",
+    "reset": "রিসেট",
+    "noResults": "কোনো হোটেল পাওয়া যায়নি",
+    "adjustSearch": "আপনার অনুসন্ধান পরিবর্তন করুন",
+    "cancel": "বাতিল",
+    "save": "সংরক্ষণ"
+  },
+  "details": {
+    "description": "বিবরণ",
+    "readMore": "আরও পড়ুন",
+    "readLess": "কম পড়ুন",
+    "reviews": "পর্যালোচনা",
+    "rooms": "উপলব্ধ কক্ষ",
+    "amenities": "সুবিধাসমূহ",
+    "checkAvailability": "উপলব্ধতা যাচাই করুন",
+    "selectDates": "তারিখ নির্বাচন করুন"
+  }
+}

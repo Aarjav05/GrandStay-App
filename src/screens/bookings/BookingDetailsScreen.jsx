@@ -132,7 +132,7 @@ const detailStyles = StyleSheet.create({
   icon: { marginRight: 12 },
   info: { flex: 1 },
   label: { fontSize: 12 },
-  value: { fontSize: 14, fontWeight: '500', marginTop: 2 },
+  value: { fontSize: 14, fontFamily: 'Inter_500Medium', marginTop: 2 },
 });
 
 const styles = StyleSheet.create({
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   content: { padding: SPACING.lg },
   heroImage: { width: '100%', height: 200, borderRadius: BORDER_RADIUS.lg, marginBottom: SPACING.lg },
   headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 4 },
-  hotelName: { fontSize: FONT_SIZES.xxl, fontWeight: '800', flex: 1, marginRight: 8 },
+  hotelName: { fontSize: FONT_SIZES.xxl, fontFamily: 'Inter_800ExtraBold', flex: 1, marginRight: 8 },
   ref: { fontSize: FONT_SIZES.sm, marginBottom: SPACING.lg, fontFamily: 'monospace' },
   detailCard: { borderRadius: BORDER_RADIUS.lg, padding: SPACING.lg, borderWidth: 1, marginBottom: SPACING.lg },
   section: { marginBottom: SPACING.lg },

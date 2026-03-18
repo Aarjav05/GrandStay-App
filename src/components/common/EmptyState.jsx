@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: FONT_SIZES.xl,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
     marginTop: SPACING.lg,
     textAlign: 'center',
   },

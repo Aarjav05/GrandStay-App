@@ -33,16 +33,12 @@ export const useSearch = () => {
   const updateFilters = useCallback((newFilters) => {
     const merged = { ...filters, ...newFilters };
     setFilters(merged);
-    if (query.trim()) {
-      search(query, merged);
-    }
+    search(query, merged);
   }, [filters, query, search]);
 
   const resetFilters = useCallback(() => {
     setFilters({});
-    if (query.trim()) {
-      search(query, {});
-    }
+    search(query, {});
   }, [query, search]);
 
   useEffect(() => {

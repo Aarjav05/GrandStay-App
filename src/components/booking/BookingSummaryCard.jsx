@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row' },
   image: { width: 80, height: 80, borderRadius: BORDER_RADIUS.md },
   info: { flex: 1, marginLeft: SPACING.md, justifyContent: 'center' },
-  name: { fontSize: FONT_SIZES.lg, fontWeight: '700', marginBottom: 2 },
+  name: { fontSize: FONT_SIZES.lg, fontFamily: 'Inter_700Bold', marginBottom: 2 },
   room: { fontSize: FONT_SIZES.sm, marginBottom: 2 },
   dates: { fontSize: FONT_SIZES.sm, marginBottom: 2 },
   details: { fontSize: FONT_SIZES.xs },

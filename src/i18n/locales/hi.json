@@ -1,0 +1,86 @@
+{
+  "home": {
+    "greeting": "नमस्ते",
+    "featured": "विशेष होटल",
+    "popular": "लोकप्रिय होटल",
+    "searchPlaceholder": "होटल, शहर खोजें..."
+  },
+  "auth": {
+    "login": "लॉगिन",
+    "signup": "साइन अप",
+    "createAccount": "खाता बनाएं",
+    "welcomeBack": "वापसी पर स्वागत है",
+    "joinSubtitle": "अतिथि से जुड़ें और अपना सही ठहराव खोजें",
+    "signInSubtitle": "अपनी यात्रा जारी रखने के लिए लॉगिन करें",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "noAccount": "खाता नहीं है?",
+    "haveAccount": "पहले से खाता है?"
+  },
+  "booking": {
+    "review": "समीक्षा",
+    "payment": "भुगतान",
+    "confirmed": "पुष्टि",
+    "guestName": "अतिथि का नाम",
+    "phone": "फ़ोन नंबर",
+    "specialRequests": "विशेष अनुरोध (वैकल्पिक)",
+    "proceedPayment": "भुगतान करें",
+    "amountDue": "भुगतान राशि",
+    "paymentMethod": "भुगतान का तरीका",
+    "payButton": "भुगतान करें",
+    "bookingConfirmed": "बुकिंग पुष्टि! 🎉",
+    "bookingId": "बुकिंग आईडी",
+    "hotel": "होटल",
+    "room": "कमरा",
+    "checkIn": "चेक-इन",
+    "checkOut": "चेक-आउट",
+    "totalPaid": "कुल भुगतान",
+    "viewBookings": "मेरी बुकिंग देखें",
+    "backHome": "होम पर वापस जाएं",
+    "security": "256-बिट SSL एन्क्रिप्टेड · PCI DSS अनुरूप"
+  },
+  "profile": {
+    "wishlist": "मेरी इच्छा-सूची",
+    "settings": "सेटिंग्स",
+    "help": "सहायता",
+    "about": "अतिथि के बारे में",
+    "logout": "लॉगआउट",
+    "bookings": "बुकिंग",
+    "completed": "पूर्ण",
+    "spent": "खर्च"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "theme": "डार्क मोड",
+    "language": "भाषा",
+    "notifications": "सूचनाएं",
+    "currency": "मुद्रा"
+  },
+  "common": {
+    "traveler": "यात्री",
+    "perNight": "/रात",
+    "filters": "फ़िल्टर",
+    "sortBy": "क्रमबद्ध करें",
+    "starRating": "स्टार रेटिंग",
+    "amenities": "सुविधाएं",
+    "apply": "लागू करें",
+    "reset": "रीसेट",
+    "noResults": "कोई होटल नहीं मिला",
+    "adjustSearch": "अपनी खोज या फ़िल्टर बदलें",
+    "cancel": "रद्द करें",
+    "save": "सहेजें"
+  },
+  "details": {
+    "description": "विवरण",
+    "readMore": "और पढ़ें",
+    "readLess": "कम पढ़ें",
+    "reviews": "समीक्षाएं",
+    "rooms": "उपलब्ध कमरे",
+    "amenities": "सुविधाएं",
+    "checkAvailability": "उपलब्धता जांचें",
+    "selectDates": "तिथियाँ चुनें"
+  }
+}

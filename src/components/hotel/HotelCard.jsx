@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import React, { useRef } from 'react';
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../hooks/useTheme';
 import { BORDER_RADIUS, FONT_SIZES, SPACING, SHADOWS } from '../../utils/constants';
@@ -9,6 +9,15 @@ const { width } = Dimensions.get('window');
 
 const HotelCard = ({ hotel, onPress, onWishlistToggle, isWishlisted = false, style }) => {
   const { colors } = useTheme();
+  const scaleAnim = useRef(new Animated.Value(1)).current;
+
+  const handleWishlistPress = () => {
+    Animated.sequence([
+      Animated.timing(scaleAnim, { toValue: 1.4, duration: 100, useNativeDriver: true }),
+      Animated.spring(scaleAnim, { toValue: 1, friction: 3, tension: 40, useNativeDriver: true })
+    ]).start();
+    onWishlistToggle?.(hotel);
+  };
 
   return (
     <TouchableOpacity
@@ -24,14 +33,16 @@ const HotelCard = ({ hotel, onPress, onWishlistToggle, isWishlisted = false, sty
         />
         <TouchableOpacity
           style={styles.heartButton}
-          onPress={() => onWishlistToggle?.(hotel)}
+          onPress={handleWishlistPress}
         >
           <View style={styles.heartBg}>
-            <Ionicons
-              name={isWishlisted ? 'heart' : 'heart-outline'}
-              size={20}
-              color={isWishlisted ? '#EF5350' : '#fff'}
-            />
+            <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
+              <Ionicons
+                name={isWishlisted ? 'heart' : 'heart-outline'}
+                size={20}
+                color={isWishlisted ? '#EF5350' : '#fff'}
+              />
+            </Animated.View>
           </View>
         </TouchableOpacity>
         {hotel.featured && (
@@ -115,7 +126,7 @@ const styles = StyleSheet.create({
   featuredText: {
     color: '#fff',
     fontSize: FONT_SIZES.xs,
-    fontWeight: '700',
+    fontFamily: 'Inter_700Bold',
   },
   distanceBadge: {
     position: 'absolute',
@@ -130,7 +141,7 @@ const styles = StyleSheet.create({
   distanceText: {
     color: '#fff',
     fontSize: FONT_SIZES.xs,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
     marginLeft: 3,
   },
   content: {
@@ -138,7 +149,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: FONT_SIZES.lg,
-    fontWeight: '700',
+    fontFamily: 'Inter_700Bold',
     marginBottom: 4,
   },
   locationRow: {
@@ -161,7 +172,7 @@ const styles = StyleSheet.create({
   },
   rating: {
     fontSize: FONT_SIZES.sm,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
     marginLeft: 4,
   },
   reviews: {
@@ -174,7 +185,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: FONT_SIZES.xl,
-    fontWeight: '800',
+    fontFamily: 'Inter_800ExtraBold',
   },
   perNight: {
     fontSize: FONT_SIZES.xs,

@@ -42,7 +42,7 @@ const SplashScreen = ({ navigation }) => {
         <View style={styles.logoContainer}>
           <Ionicons name="bed" size={64} color="#fff" />
         </View>
-        <Text style={styles.appName}>GrandStay</Text>
+        <Text style={styles.appName}>अतिथि</Text>
         <Text style={styles.tagline}>Your Perfect Stay Awaits</Text>
       </Animated.View>
     </View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.15)',
     alignItems: 'center', justifyContent: 'center', marginBottom: 20,
   },
-  appName: { fontSize: 36, fontWeight: '800', color: '#fff', letterSpacing: 1 },
+  appName: { fontSize: 36, fontFamily: 'Inter_800ExtraBold', color: '#fff', letterSpacing: 1 },
   tagline: { fontSize: 16, color: 'rgba(255,255,255,0.8)', marginTop: 8 },
 });
 

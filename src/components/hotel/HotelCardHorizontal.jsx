@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: FONT_SIZES.md,
-    fontWeight: '700',
+    fontFamily: 'Inter_700Bold',
     marginBottom: 2,
   },
   locationRow: {
@@ -81,16 +81,16 @@ const styles = StyleSheet.create({
   },
   rating: {
     fontSize: FONT_SIZES.xs,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
     marginLeft: 3,
   },
   price: {
     fontSize: FONT_SIZES.lg,
-    fontWeight: '800',
+    fontFamily: 'Inter_800ExtraBold',
   },
   perNight: {
     fontSize: FONT_SIZES.xs,
-    fontWeight: '400',
+    fontFamily: 'Inter_400Regular',
   },
 });
 

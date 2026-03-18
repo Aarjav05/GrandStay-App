@@ -42,7 +42,7 @@ const MainTabs = () => {
         },
         tabBarLabelStyle: {
           fontSize: 11,
-          fontWeight: '500',
+          fontFamily: 'Inter_500Medium',
         },
       })}
     >

@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: FONT_SIZES.sm,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
     marginBottom: SPACING.xs,
   },
   container: {

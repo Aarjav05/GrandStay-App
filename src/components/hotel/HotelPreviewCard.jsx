@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: FONT_SIZES.md,
-    fontWeight: '700',
+    fontFamily: 'Inter_700Bold',
   },
   ratingRow: {
     flexDirection: 'row',
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: FONT_SIZES.md,
-    fontWeight: '700',
+    fontFamily: 'Inter_700Bold',
   },
   viewBtn: {
     paddingHorizontal: 10,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   viewBtnText: {
     color: '#fff',
     fontSize: FONT_SIZES.xs,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
   },
 });
 

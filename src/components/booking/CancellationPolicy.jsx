@@ -31,7 +31,7 @@ const CancellationPolicy = ({ style }) => {
 const styles = StyleSheet.create({
   container: { borderRadius: BORDER_RADIUS.md, borderWidth: 1, overflow: 'hidden' },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: SPACING.md },
-  title: { fontSize: FONT_SIZES.md, fontWeight: '600' },
+  title: { fontSize: FONT_SIZES.md, fontFamily: 'Inter_600SemiBold' },
   content: { paddingHorizontal: SPACING.md, paddingBottom: SPACING.md },
   text: { fontSize: FONT_SIZES.sm, lineHeight: 22 },
 });

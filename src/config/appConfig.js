@@ -1,5 +1,5 @@
 export const APP_CONFIG = {
-  APP_NAME: 'GrandStay',
+  APP_NAME: 'अतिथि',
   APP_VERSION: '1.0.0',
   DEFAULT_CITY: {
     name: 'Mumbai',

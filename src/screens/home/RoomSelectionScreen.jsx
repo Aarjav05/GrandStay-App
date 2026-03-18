@@ -138,20 +138,20 @@ const RoomSelectionScreen = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   list: { padding: SPACING.lg },
-  hotelName: { fontSize: FONT_SIZES.sm, fontWeight: '500', marginBottom: SPACING.md },
-  sectionTitle: { fontSize: FONT_SIZES.xl, fontWeight: '700', marginBottom: SPACING.md },
+  hotelName: { fontSize: FONT_SIZES.sm, fontFamily: 'Inter_500Medium', marginBottom: SPACING.md },
+  sectionTitle: { fontSize: FONT_SIZES.xl, fontFamily: 'Inter_700Bold', marginBottom: SPACING.md },
   dateRow: { flexDirection: 'row', alignItems: 'center', marginBottom: SPACING.sm },
   dateBox: { flex: 1, padding: SPACING.md, borderRadius: BORDER_RADIUS.md, borderWidth: 1 },
   dateLabel: { fontSize: FONT_SIZES.xs, marginBottom: 4 },
-  dateValue: { fontSize: FONT_SIZES.md, fontWeight: '600' },
-  nightsText: { fontSize: FONT_SIZES.sm, fontWeight: '600', marginBottom: SPACING.lg },
+  dateValue: { fontSize: FONT_SIZES.md, fontFamily: 'Inter_600SemiBold' },
+  nightsText: { fontSize: FONT_SIZES.sm, fontFamily: 'Inter_600SemiBold', marginBottom: SPACING.lg },
   bottomBar: {
     position: 'absolute', bottom: 0, left: 0, right: 0,
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
     paddingHorizontal: SPACING.lg, paddingVertical: SPACING.md, borderTopWidth: 1,
   },
   summaryText: { fontSize: FONT_SIZES.sm },
-  totalText: { fontSize: FONT_SIZES.lg, fontWeight: '700' },
+  totalText: { fontSize: FONT_SIZES.lg, fontFamily: 'Inter_700Bold' },
 });
 
 export default RoomSelectionScreen;

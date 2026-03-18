@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   text: {
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
   },
 });
 

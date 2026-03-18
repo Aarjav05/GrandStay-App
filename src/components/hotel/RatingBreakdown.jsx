@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   overallRating: {
     fontSize: 42,
-    fontWeight: '800',
+    fontFamily: 'Inter_800ExtraBold',
     marginRight: SPACING.md,
   },
   overallInfo: {},

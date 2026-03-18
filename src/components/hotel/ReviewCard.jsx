@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: FONT_SIZES.sm,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
   },
   date: {
     fontSize: FONT_SIZES.xs,

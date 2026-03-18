@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     ...SHADOWS.sm,
   },
   emoji: { fontSize: 24, marginRight: SPACING.md },
-  label: { flex: 1, fontSize: FONT_SIZES.md, fontWeight: '500' },
+  label: { flex: 1, fontSize: FONT_SIZES.md, fontFamily: 'Inter_500Medium' },
   radio: { width: 22, height: 22, borderRadius: 11, borderWidth: 2, alignItems: 'center', justifyContent: 'center' },
   radioInner: { width: 12, height: 12, borderRadius: 6 },
 });

@@ -8,17 +8,19 @@ import Divider from '../../components/common/Divider';
 import { showToast } from '../../components/common/Toast';
 import * as bookingService from '../../services/bookingService';
 import { SPACING, FONT_SIZES, BORDER_RADIUS, SHADOWS } from '../../utils/constants';
+import { useTranslation } from 'react-i18next';
 
-const MENU_ITEMS = [
-  { id: 'wishlist', icon: 'heart-outline', label: 'My Wishlist', screen: 'Wishlist' },
-  { id: 'settings', icon: 'settings-outline', label: 'Settings', screen: 'Settings' },
-  { id: 'help', icon: 'help-circle-outline', label: 'Help & Support' },
-  { id: 'about', icon: 'information-circle-outline', label: 'About GrandStay' },
+const getMenuItems = (t) => [
+  { id: 'wishlist', icon: 'heart-outline', label: t('profile.wishlist'), screen: 'Wishlist' },
+  { id: 'settings', icon: 'settings-outline', label: t('profile.settings'), screen: 'Settings' },
+  { id: 'help', icon: 'help-circle-outline', label: t('profile.help') },
+  { id: 'about', icon: 'information-circle-outline', label: t('profile.about') },
 ];
 
 const ProfileScreen = ({ navigation }) => {
   const { colors } = useTheme();
   const { user, logout } = useAuth();
+  const { t } = useTranslation();
   const [stats, setStats] = useState({ totalBookings: 0, totalSpent: 0, completedBookings: 0 });
 
   useEffect(() => {
@@ -49,18 +51,18 @@ const ProfileScreen = ({ navigation }) => {
     >
       <View style={[styles.header, { backgroundColor: colors.primary }]}>
         <Avatar uri={user?.avatar} name={user?.name} size={80} />
-        <Text style={styles.name}>{user?.name || 'Traveler'}</Text>
+        <Text style={styles.name}>{user?.name || t('common.traveler')}</Text>
         <Text style={styles.email}>{user?.email}</Text>
       </View>
 
       <View style={styles.statsRow}>
-        <StatBox label="Bookings" value={stats.totalBookings} colors={colors} />
-        <StatBox label="Completed" value={stats.completedBookings} colors={colors} />
-        <StatBox label="Spent" value={`₹${Math.round(stats.totalSpent / 1000)}k`} colors={colors} />
+        <StatBox label={t('profile.bookings')} value={stats.totalBookings} colors={colors} />
+        <StatBox label={t('profile.completed')} value={stats.completedBookings} colors={colors} />
+        <StatBox label={t('profile.spent')} value={`₹${Math.round(stats.totalSpent / 1000)}k`} colors={colors} />
       </View>
 
       <View style={styles.menu}>
-        {MENU_ITEMS.map((item) => (
+        {getMenuItems(t).map((item) => (
           <TouchableOpacity
             key={item.id}
             style={[styles.menuItem, { borderColor: colors.borderLight }]}
@@ -77,10 +79,10 @@ const ProfileScreen = ({ navigation }) => {
 
       <TouchableOpacity onPress={handleLogout} style={[styles.logoutBtn, { borderColor: colors.error }]}>
         <Ionicons name="log-out-outline" size={20} color={colors.error} />
-        <Text style={[styles.logoutText, { color: colors.error }]}>Logout</Text>
+        <Text style={[styles.logoutText, { color: colors.error }]}>{t('profile.logout')}</Text>
       </TouchableOpacity>
 
-      <Text style={[styles.version, { color: colors.textTertiary }]}>GrandStay v1.0.0</Text>
+      <Text style={[styles.version, { color: colors.textTertiary }]}>अतिथि v1.0.0</Text>
       <View style={{ height: 40 }} />
     </ScrollView>
   );
@@ -95,14 +97,14 @@ const StatBox = ({ label, value, colors }) => (
 
 const statStyles = StyleSheet.create({
   box: { flex: 1, alignItems: 'center', padding: SPACING.md, borderRadius: BORDER_RADIUS.md, borderWidth: 1, marginHorizontal: 4, ...SHADOWS.sm },
-  value: { fontSize: FONT_SIZES.xxl, fontWeight: '800' },
+  value: { fontSize: FONT_SIZES.xxl, fontFamily: 'Inter_800ExtraBold' },
   label: { fontSize: FONT_SIZES.xs, marginTop: 4 },
 });
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
   header: { alignItems: 'center', paddingTop: 60, paddingBottom: 30, borderBottomLeftRadius: 30, borderBottomRightRadius: 30 },
-  name: { fontSize: FONT_SIZES.xxl, fontWeight: '800', color: '#fff', marginTop: SPACING.md },
+  name: { fontSize: FONT_SIZES.xxl, fontFamily: 'Inter_800ExtraBold', color: '#fff', marginTop: SPACING.md },
   email: { fontSize: FONT_SIZES.sm, color: 'rgba(255,255,255,0.8)', marginTop: 4 },
   statsRow: { flexDirection: 'row', paddingHorizontal: SPACING.lg, marginTop: -20, marginBottom: SPACING.lg },
   menu: { paddingHorizontal: SPACING.lg },
@@ -111,13 +113,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   menuIcon: { width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center', marginRight: 12 },
-  menuLabel: { flex: 1, fontSize: FONT_SIZES.md, fontWeight: '500' },
+  menuLabel: { flex: 1, fontSize: FONT_SIZES.md, fontFamily: 'Inter_500Medium' },
   logoutBtn: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
     marginHorizontal: SPACING.lg, marginTop: SPACING.xxl,
     paddingVertical: SPACING.md, borderRadius: BORDER_RADIUS.md, borderWidth: 1.5,
   },
-  logoutText: { fontSize: FONT_SIZES.md, fontWeight: '600', marginLeft: 8 },
+  logoutText: { fontSize: FONT_SIZES.md, fontFamily: 'Inter_600SemiBold', marginLeft: 8 },
   version: { textAlign: 'center', fontSize: FONT_SIZES.xs, marginTop: SPACING.lg },
 });
 

@@ -23,7 +23,7 @@ const HomeStack = () => {
           shadowOpacity: 0,
         },
         headerTintColor: colors.text,
-        headerTitleStyle: { fontWeight: '600' },
+        headerTitleStyle: { fontFamily: 'Inter_600SemiBold' },
         cardStyle: { backgroundColor: colors.background },
       }}
     >

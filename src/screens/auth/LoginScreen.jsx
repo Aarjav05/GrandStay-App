@@ -10,6 +10,7 @@ import { isValidEmail } from '../../utils/validators';
 import { Ionicons } from '@expo/vector-icons';
 import { SPACING, FONT_SIZES } from '../../utils/constants';
 import * as authService from '../../services/authService';
+import { useTranslation } from 'react-i18next';
 
 const LoginScreen = ({ navigation }) => {
   const { colors } = useTheme();
@@ -18,6 +19,7 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
+  const { t } = useTranslation();
 
   const validate = () => {
     const e = {};
@@ -79,9 +81,9 @@ const LoginScreen = ({ navigation }) => {
           <View style={[styles.iconBg, { backgroundColor: colors.primary + '15' }]}>
             <Ionicons name="bed" size={40} color={colors.primary} />
           </View>
-          <Text style={[styles.title, { color: colors.text }]}>Welcome Back</Text>
+          <Text style={[styles.title, { color: colors.text }]}>{t('auth.welcomeBack')}</Text>
           <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Sign in to continue your journey
+            {t('auth.signInSubtitle')}
           </Text>
         </View>
 
@@ -113,14 +115,14 @@ const LoginScreen = ({ navigation }) => {
           style={styles.forgotBtn}
         />
 
-        <Button title="Login" onPress={handleLogin} loading={loading} style={styles.loginBtn} />
+        <Button title={t('auth.login')} onPress={handleLogin} loading={loading} style={styles.loginBtn} />
 
         <View style={styles.footer}>
           <Text style={[styles.footerText, { color: colors.textSecondary }]}>
-            Don't have an account?{' '}
+            {t('auth.noAccount')}{' '}
           </Text>
           <Button
-            title="Sign Up"
+            title={t('auth.signup')}
             onPress={() => navigation.navigate('Signup')}
             variant="ghost"
             size="sm"
@@ -136,7 +138,7 @@ const styles = StyleSheet.create({
   content: { flexGrow: 1, justifyContent: 'center', padding: SPACING.xxl },
   header: { alignItems: 'center', marginBottom: SPACING.xxxl },
   iconBg: { width: 80, height: 80, borderRadius: 20, alignItems: 'center', justifyContent: 'center', marginBottom: 16 },
-  title: { fontSize: FONT_SIZES.title, fontWeight: '800', marginBottom: 6 },
+  title: { fontSize: FONT_SIZES.title, fontFamily: 'Inter_800ExtraBold', marginBottom: 6 },
   subtitle: { fontSize: FONT_SIZES.md, textAlign: 'center' },
   forgotBtn: { alignSelf: 'flex-end', marginBottom: SPACING.lg },
   loginBtn: { marginTop: SPACING.sm },

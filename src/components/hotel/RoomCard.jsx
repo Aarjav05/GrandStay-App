@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   },
   type: {
     fontSize: FONT_SIZES.xl,
-    fontWeight: '700',
+    fontFamily: 'Inter_700Bold',
   },
   infoRow: {
     flexDirection: 'row',
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: FONT_SIZES.xxl,
-    fontWeight: '800',
+    fontFamily: 'Inter_800ExtraBold',
   },
   perNight: {
     fontSize: FONT_SIZES.xs,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   },
   selectText: {
     fontSize: FONT_SIZES.sm,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
   },
 });
 

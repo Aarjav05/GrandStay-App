@@ -1,0 +1,86 @@
+{
+  "home": {
+    "greeting": "ನಮಸ್ಕಾರ",
+    "featured": "ವಿಶೇಷ ಹೋಟೆಲ್‌ಗಳು",
+    "popular": "ಜನಪ್ರಿಯ ಹೋಟೆಲ್‌ಗಳು",
+    "searchPlaceholder": "ಹೋಟೆಲ್, ನಗರಗಳನ್ನು ಹುಡುಕಿ..."
+  },
+  "auth": {
+    "login": "ಲಾಗಿನ್",
+    "signup": "ಸೈನ್ ಅಪ್",
+    "createAccount": "ಖಾತೆ ರಚಿಸಿ",
+    "welcomeBack": "ಮರಳಿ ಸ್ವಾಗತ",
+    "joinSubtitle": "ನಿಮ್ಮ ಸರಿಯಾದ ತಂಗುವಿಕೆ ಕಂಡುಕೊಳ್ಳಿ",
+    "signInSubtitle": "ನಿಮ್ಮ ಪ್ರಯಾಣ ಮುಂದುವರಿಸಲು ಲಾಗಿನ್ ಮಾಡಿ",
+    "fullName": "ಪೂರ್ಣ ಹೆಸರು",
+    "email": "ಇಮೇಲ್",
+    "password": "ಪಾಸ್‌ವರ್ಡ್",
+    "confirmPassword": "ಪಾಸ್‌ವರ್ಡ್ ದೃಢೀಕರಿಸಿ",
+    "forgotPassword": "ಪಾಸ್‌ವರ್ಡ್ ಮರೆತಿರಾ?",
+    "noAccount": "ಖಾತೆ ಇಲ್ಲವೇ?",
+    "haveAccount": "ಈಗಾಗಲೇ ಖಾತೆ ಇದೆಯೇ?"
+  },
+  "booking": {
+    "review": "ಪರಿಶೀಲನೆ",
+    "payment": "ಪಾವತಿ",
+    "confirmed": "ದೃಢೀಕರಿಸಲಾಗಿದೆ",
+    "guestName": "ಅತಿಥಿ ಹೆಸರು",
+    "phone": "ಫೋನ್ ಸಂಖ್ಯೆ",
+    "specialRequests": "ವಿಶೇಷ ವಿನಂತಿಗಳು (ಐಚ್ಛಿಕ)",
+    "proceedPayment": "ಪಾವತಿ ಮಾಡಿ",
+    "amountDue": "ಪಾವತಿ ಮೊತ್ತ",
+    "paymentMethod": "ಪಾವತಿ ವಿಧಾನ",
+    "payButton": "ಪಾವತಿ",
+    "bookingConfirmed": "ಬುಕಿಂಗ್ ದೃಢೀಕರಿಸಲಾಗಿದೆ! 🎉",
+    "bookingId": "ಬುಕಿಂಗ್ ಐಡಿ",
+    "hotel": "ಹೋಟೆಲ್",
+    "room": "ಕೊಠಡಿ",
+    "checkIn": "ಚೆಕ್-ಇನ್",
+    "checkOut": "ಚೆಕ್-ಔಟ್",
+    "totalPaid": "ಒಟ್ಟು ಪಾವತಿ",
+    "viewBookings": "ನನ್ನ ಬುಕಿಂಗ್‌ಗಳನ್ನು ನೋಡಿ",
+    "backHome": "ಹೋಮ್‌ಗೆ ಹಿಂತಿರುಗಿ",
+    "security": "256-ಬಿಟ್ SSL ಎನ್‌ಕ್ರಿಪ್ಟೆಡ್ · PCI DSS"
+  },
+  "profile": {
+    "wishlist": "ಆಸೆ ಪಟ್ಟಿ",
+    "settings": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "help": "ಸಹಾಯ",
+    "about": "ಅತಿಥಿ ಬಗ್ಗೆ",
+    "logout": "ಲಾಗ್ ಔಟ್",
+    "bookings": "ಬುಕಿಂಗ್‌ಗಳು",
+    "completed": "ಪೂರ್ಣಗೊಂಡಿದೆ",
+    "spent": "ಖರ್ಚು"
+  },
+  "settings": {
+    "title": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "theme": "ಡಾರ್ಕ್ ಮೋಡ್",
+    "language": "ಭಾಷೆ",
+    "notifications": "ಅಧಿಸೂಚನೆಗಳು",
+    "currency": "ಕರೆನ್ಸಿ"
+  },
+  "common": {
+    "traveler": "ಪ್ರಯಾಣಿಕ",
+    "perNight": "/ರಾತ್ರಿ",
+    "filters": "ಫಿಲ್ಟರ್‌ಗಳು",
+    "sortBy": "ವಿಂಗಡಿಸಿ",
+    "starRating": "ಸ್ಟಾರ್ ರೇಟಿಂಗ್",
+    "amenities": "ಸೌಲಭ್ಯಗಳು",
+    "apply": "ಅನ್ವಯಿಸಿ",
+    "reset": "ರೀಸೆಟ್",
+    "noResults": "ಹೋಟೆಲ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ",
+    "adjustSearch": "ನಿಮ್ಮ ಹುಡುಕಾಟ ಬದಲಿಸಿ",
+    "cancel": "ರದ್ದುಮಾಡಿ",
+    "save": "ಉಳಿಸಿ"
+  },
+  "details": {
+    "description": "ವಿವರಣೆ",
+    "readMore": "ಇನ್ನಷ್ಟು ಓದಿ",
+    "readLess": "ಕಡಿಮೆ ಓದಿ",
+    "reviews": "ವಿಮರ್ಶೆಗಳು",
+    "rooms": "ಲಭ್ಯವಿರುವ ಕೊಠಡಿಗಳು",
+    "amenities": "ಸೌಲಭ್ಯಗಳು",
+    "checkAvailability": "ಲಭ್ಯತೆ ಪರಿಶೀಲಿಸಿ",
+    "selectDates": "ದಿನಾಂಕಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"
+  }
+}

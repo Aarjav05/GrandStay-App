@@ -20,10 +20,9 @@ export const useReviews = (hotelId) => {
     }
   }, [hotelId]);
 
-  const addReview = useCallback(async (userId, bookingId, rating, comment, userName, userAvatar) => {
+  const addReview = useCallback(async (userId, userName, rating, text) => {
     try {
-      await reviewService.addReview(userId, hotelId, bookingId, rating, comment, userName, userAvatar);
-      // Refresh reviews
+      await reviewService.addReview(hotelId, userId, userName, rating, text);
       await loadReviews();
     } catch (e) {
       throw e;

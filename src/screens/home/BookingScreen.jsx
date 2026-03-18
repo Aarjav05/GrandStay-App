@@ -14,12 +14,14 @@ import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';
 import { SPACING } from '../../utils/constants';
 import { applyPromoCode } from '../../services/bookingService';
+import { useTranslation } from 'react-i18next';
 
 const BookingScreen = ({ navigation }) => {
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const { user } = useAuth();
   const { draft, setDraftField, updatePrice } = useBooking();
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -42,13 +44,13 @@ const BookingScreen = ({ navigation }) => {
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
-        <ProgressSteps currentStep={1} />
+        <ProgressSteps currentStep={1} steps={[t('booking.review'), t('booking.payment'), t('booking.confirmed')]} />
 
         <BookingSummaryCard booking={draft} style={styles.card} />
 
-        <Input label="Guest Name" value={draft.guestName} onChangeText={(t) => setDraftField('guestName', t)} placeholder="Full name" autoCapitalize="words" />
-        <Input label="Phone Number" value={draft.guestPhone} onChangeText={(t) => setDraftField('guestPhone', t)} placeholder="+91 9876543210" keyboardType="phone-pad" />
-        <Input label="Special Requests (Optional)" value={draft.specialRequests} onChangeText={(t) => setDraftField('specialRequests', t)} placeholder="Any special requirements?" multiline numberOfLines={3} />
+        <Input label={t('booking.guestName')} value={draft.guestName} onChangeText={(t2) => setDraftField('guestName', t2)} placeholder="Full name" autoCapitalize="words" />
+        <Input label={t('booking.phone')} value={draft.guestPhone} onChangeText={(t2) => setDraftField('guestPhone', t2)} placeholder="+91 9876543210" keyboardType="phone-pad" />
+        <Input label={t('booking.specialRequests')} value={draft.specialRequests} onChangeText={(t2) => setDraftField('specialRequests', t2)} placeholder="Any special requirements?" multiline numberOfLines={3} />
 
         <PromoCodeInput onApply={handlePromo} appliedCode={draft.promoCode} style={styles.card} />
 
@@ -56,7 +58,7 @@ const BookingScreen = ({ navigation }) => {
 
         <CancellationPolicy style={styles.card} />
 
-        <Button title="Proceed to Payment" onPress={() => navigation.navigate('Payment')} icon="lock-closed" iconPosition="left" style={styles.cta} />
+        <Button title={t('booking.proceedPayment')} onPress={() => navigation.navigate('Payment')} icon="lock-closed" iconPosition="left" style={styles.cta} />
 
         <View style={{ height: 40 + insets.bottom }} />
       </ScrollView>

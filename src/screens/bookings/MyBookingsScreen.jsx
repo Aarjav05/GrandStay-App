@@ -116,11 +116,11 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   tabs: { flexDirection: 'row', paddingHorizontal: SPACING.lg, paddingVertical: SPACING.sm },
   tab: { paddingHorizontal: 14, paddingVertical: 8, borderRadius: BORDER_RADIUS.full, marginRight: 8 },
-  tabText: { fontSize: FONT_SIZES.sm, fontWeight: '500' },
+  tabText: { fontSize: FONT_SIZES.sm, fontFamily: 'Inter_500Medium' },
   list: { paddingHorizontal: SPACING.lg, paddingBottom: 100 },
   bookingItem: { marginBottom: SPACING.md },
   bookingFooter: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 8 },
-  total: { fontSize: FONT_SIZES.lg, fontWeight: '700' },
+  total: { fontSize: FONT_SIZES.lg, fontFamily: 'Inter_700Bold' },
 });
 
 export default MyBookingsScreen;

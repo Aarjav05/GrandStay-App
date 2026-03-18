@@ -9,6 +9,7 @@ import { showToast } from '../../components/common/Toast';
 import { isValidEmail, isValidPassword, getPasswordStrength } from '../../utils/validators';
 import { Ionicons } from '@expo/vector-icons';
 import { SPACING, FONT_SIZES } from '../../utils/constants';
+import { useTranslation } from 'react-i18next';
 
 const SignupScreen = ({ navigation }) => {
   const { colors } = useTheme();
@@ -19,6 +20,7 @@ const SignupScreen = ({ navigation }) => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
+  const { t } = useTranslation();
 
   const strength = getPasswordStrength(password);
 
@@ -66,9 +68,9 @@ const SignupScreen = ({ navigation }) => {
           <View style={[styles.iconBg, { backgroundColor: colors.primary + '15' }]}>
             <Ionicons name="person-add" size={36} color={colors.primary} />
           </View>
-          <Text style={[styles.title, { color: colors.text }]}>Create Account</Text>
+          <Text style={[styles.title, { color: colors.text }]}>{t('auth.createAccount')}</Text>
           <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Join GrandStay to discover your perfect stay
+            {t('auth.joinSubtitle')}
           </Text>
         </View>
 
@@ -87,11 +89,11 @@ const SignupScreen = ({ navigation }) => {
 
         <Input label="Confirm Password" value={confirmPassword} onChangeText={setConfirmPassword} placeholder="Re-enter password" variant="password" leftIcon="lock-closed-outline" error={errors.confirmPassword} />
 
-        <Button title="Create Account" onPress={handleSignup} loading={loading} style={styles.signupBtn} />
+        <Button title={t('auth.createAccount')} onPress={handleSignup} loading={loading} style={styles.signupBtn} />
 
         <View style={styles.footer}>
-          <Text style={[styles.footerText, { color: colors.textSecondary }]}>Already have an account? </Text>
-          <Button title="Login" onPress={() => navigation.goBack()} variant="ghost" size="sm" fullWidth={false} />
+          <Text style={[styles.footerText, { color: colors.textSecondary }]}>{t('auth.haveAccount')} </Text>
+          <Button title={t('auth.login')} onPress={() => navigation.goBack()} variant="ghost" size="sm" fullWidth={false} />
         </View>
     </KeyboardAwareScrollView>
   );
@@ -102,12 +104,12 @@ const styles = StyleSheet.create({
   content: { flexGrow: 1, justifyContent: 'center', padding: SPACING.xxl },
   header: { alignItems: 'center', marginBottom: SPACING.xxl },
   iconBg: { width: 80, height: 80, borderRadius: 20, alignItems: 'center', justifyContent: 'center', marginBottom: 16 },
-  title: { fontSize: FONT_SIZES.title, fontWeight: '800', marginBottom: 6 },
+  title: { fontSize: FONT_SIZES.title, fontFamily: 'Inter_800ExtraBold', marginBottom: 6 },
   subtitle: { fontSize: FONT_SIZES.md, textAlign: 'center' },
   strengthRow: { flexDirection: 'row', alignItems: 'center', marginTop: -12, marginBottom: SPACING.lg },
   strengthBar: { flex: 1, height: 4, borderRadius: 2, marginRight: 8, overflow: 'hidden' },
   strengthFill: { height: '100%', borderRadius: 2 },
-  strengthLabel: { fontSize: 11, fontWeight: '600' },
+  strengthLabel: { fontSize: 11, fontFamily: 'Inter_600SemiBold' },
   signupBtn: { marginTop: SPACING.sm },
   footer: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: SPACING.xxl },
   footerText: { fontSize: FONT_SIZES.md },

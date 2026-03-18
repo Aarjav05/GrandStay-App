@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   icon: { marginRight: 6 },
-  label: { fontSize: FONT_SIZES.sm, fontWeight: '500' },
+  label: { fontSize: FONT_SIZES.sm, fontFamily: 'Inter_500Medium' },
 });
 
 export default CategoryFilter;

@@ -1,0 +1,86 @@
+{
+  "home": {
+    "greeting": "Hello",
+    "featured": "Featured Hotels",
+    "popular": "Popular Hotels",
+    "searchPlaceholder": "Search hotels, cities..."
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "createAccount": "Create Account",
+    "welcomeBack": "Welcome Back",
+    "joinSubtitle": "Join अतिथि to discover your perfect stay",
+    "signInSubtitle": "Sign in to continue your journey",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?"
+  },
+  "booking": {
+    "review": "Review",
+    "payment": "Payment",
+    "confirmed": "Confirmed",
+    "guestName": "Guest Name",
+    "phone": "Phone Number",
+    "specialRequests": "Special Requests (Optional)",
+    "proceedPayment": "Proceed to Payment",
+    "amountDue": "Amount Due",
+    "paymentMethod": "Payment Method",
+    "payButton": "Pay",
+    "bookingConfirmed": "Booking Confirmed! 🎉",
+    "bookingId": "Booking ID",
+    "hotel": "Hotel",
+    "room": "Room",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "totalPaid": "Total Paid",
+    "viewBookings": "View My Bookings",
+    "backHome": "Back to Home",
+    "security": "256-bit SSL encrypted · PCI DSS compliant"
+  },
+  "profile": {
+    "wishlist": "My Wishlist",
+    "settings": "Settings",
+    "help": "Help & Support",
+    "about": "About अतिथि",
+    "logout": "Logout",
+    "bookings": "Bookings",
+    "completed": "Completed",
+    "spent": "Spent"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Dark Mode",
+    "language": "Language",
+    "notifications": "Push Notifications",
+    "currency": "Currency"
+  },
+  "common": {
+    "traveler": "Traveler",
+    "perNight": "/night",
+    "filters": "Filters",
+    "sortBy": "Sort By",
+    "starRating": "Star Rating",
+    "amenities": "Amenities",
+    "apply": "Apply Filters",
+    "reset": "Reset",
+    "noResults": "No hotels found",
+    "adjustSearch": "Try adjusting your search or filters",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "details": {
+    "description": "Description",
+    "readMore": "Read more",
+    "readLess": "Read less",
+    "reviews": "Reviews",
+    "rooms": "Available Rooms",
+    "amenities": "Amenities",
+    "checkAvailability": "Check Availability",
+    "selectDates": "Select Dates"
+  }
+}

@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#fff',
     fontSize: FONT_SIZES.sm,
-    fontWeight: '500',
+    fontFamily: 'Inter_500Medium',
     marginHorizontal: SPACING.sm,
   },
 });

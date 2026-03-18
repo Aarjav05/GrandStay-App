@@ -32,8 +32,9 @@ export const fetchById = async (id) => {
   return data;
 };
 
-// Kept old signature to not break UI, but now maps to Supabase
+// Aliases to match consumer naming
 export const fetchHotelById = fetchById;
+export const fetchFeaturedHotels = fetchFeatured;
 
 export const fetchRooms = async (hotelId) => {
   const { data, error } = await supabase

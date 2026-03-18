@@ -27,6 +27,7 @@
     "expo-notifications": "~0.32.16",
     "expo-splash-screen": "~31.0.13",
     "expo-status-bar": "~3.0.9",
+    "getenv": "^2.0.0",
     "i18next": "^25.8.18",
     "lottie-react-native": "^7.3.6",
     "react": "19.1.0",
@@ -40,7 +41,7 @@
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",
     "react-native-url-polyfill": "^3.0.0",
-    "undefined": "c:\\Users\\Aarjav\\Documents\\GitHub\\grandstay",
+    "react-native-worklets": "0.5.1",
     "uuid": "^13.0.0"
   },
   "private": true
